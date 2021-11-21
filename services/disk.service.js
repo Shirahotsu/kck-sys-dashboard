@@ -3,7 +3,6 @@ const drive = osu.drive
 
 const getDiskUsage = async () => {
     const driveInfo = await drive.info()
-    // console.log(driveInfo)
     return {
         totalGb: driveInfo.totalGb,
         usedGb: driveInfo.usedGb,

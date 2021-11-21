@@ -1,14 +1,14 @@
 const blessed = require('blessed')
 const {getMemoryUsage} = require("../services/memory.service");
 let details
-const initComponentRender = (grid) => {
+const initComponentRender = grid => {
     details = grid.set(1, 2, 1, 4, blessed.box, {
         label: 'MEMORY DETAILS',
-        content:``,
-        hidden:true,
-        padding:{
-            left:1,
-            right:1
+        content: ``,
+        hidden: true,
+        padding: {
+            left: 1,
+            right: 1
         },
         style: {
             fg: 'white',
@@ -34,7 +34,7 @@ Free:${freeMemMb}\n
 }
 
 const setVisibility = hidden => {
-    if(!details) return
+    if (!details) return
     details.hidden = hidden
 }
 
