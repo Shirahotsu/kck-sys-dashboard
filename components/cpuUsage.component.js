@@ -17,7 +17,7 @@ const initComponentRender = grid => {
 
 const rerenderComponent = async donut => {
     const cpuUsage = await getCpuUsage()
-    const percentage = cpuUsage < 1 ? 1.49 : cpuUsage
+    const percentage = cpuUsage <= 1 ? 1.1 : cpuUsage
     donut.setData([
         {percent: percentage, label: ' ', color: getPercentageColor(percentage)},
     ]);
